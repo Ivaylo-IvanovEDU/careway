@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+html, body, [class*="css"], .stApp {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.stApp {
+    background: radial-gradient(circle at 15% 0%, #0d1a2b 0%, #090E18 55%) fixed;
+    color: #F0F5FA;
+}
+
+/* ── Sidebar ─────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: #0D1726;
+    border-right: 1px solid #26384D;
+}
+[data-testid="stSidebar"] * { color: #F0F5FA; }
+
+/* ── Layout ──────────────────────────────────── */
+.main .block-container {
+    max-width: 1500px;
+    padding-top: 1.6rem;
+    padding-bottom: 3rem;
+}
+
+/* ── Typography ──────────────────────────────── */
+h1, h2, h3, h4, p, label, span { color: #F0F5FA; }
+[data-testid="stCaptionContainer"] p { color: #9AABC0 !important; }
+
+/* ── Hero ────────────────────────────────────── */
+.cw-hero {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 88% 15%, rgba(25,184,255,.18), transparent 40%),
+                linear-gradient(120deg, #14243A, #101B2B);
+    border: 1px solid #26384D;
+    border-radius: 22px;
+    padding: 28px 34px;
+    margin-bottom: 26px;
+}
+.cw-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 0% 100%, rgba(163,245,107,.08), transparent 45%);
+    pointer-events: none;
+}
+.cw-kicker {
+    color: #A3F56B;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+.cw-hero h1 {
+    font-size: 34px;
+    margin: 8px 0 4px;
+    letter-spacing: -.5px;
+}
+.cw-hero p {
+    color: #AAB9CA;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* ── Buttons ─────────────────────────────────── */
+div.stButton > button {
+    background: #19B8FF;
+    color: #07121D !important;
+    border: 0;
+    border-radius: 11px;
+    font-weight: 700;
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+div.stButton > button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(25,184,255,.35);
+}
+div.stButton > button p { color: #07121D !important; }
+
+/* Nav buttons (sidebar) — ghost style */
+[data-testid="stSidebar"] div.stButton > button {
+    background: transparent;
+    color: #F0F5FA !important;
+    border: 1px solid transparent;
+    justify-content: flex-start;
+    text-align: left;
+    font-weight: 500;
+}
+[data-testid="stSidebar"] div.stButton > button p { color: #F0F5FA !important; }
+[data-testid="stSidebar"] div.stButton > button:hover {
+    background: #142238;
+    border-color: #26384D;
+}
+
+/* ── Metrics ─────────────────────────────────── */
+[data-testid="stMetric"] {
+    background: #142238;
+    border: 1px solid #26384D;
+    border-radius: 14px;
+    padding: 14px 16px;
+}
+[data-testid="stMetric"] label,
+[data-testid="stMetricValue"] { color: #F0F5FA !important; }
+[data-testid="stMetricDelta"] { color: #A3F56B !important; }
+
+/* ── Cards & containers ──────────────────────── */
+.cw-card {
+    background: #111C2D;
+    border: 1px solid #26384D;
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    transition: border-color .15s ease;
+}
+.cw-card:hover { border-color: #19B8FF; }
+.cw-card h4 { margin: 0 0 6px; font-size: 16px; }
+.cw-card .meta { color: #9AABC0; font-size: 13px; line-height: 1.55; }
+
+/* ── Folium / iframes ────────────────────────── */
+iframe { border-radius: 15px; }
+
+/* ── Divider ─────────────────────────────────── */
+hr { border-color: #26384D; }
